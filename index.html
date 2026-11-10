@@ -4,256 +4,52 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6f0df">
-  <meta name="description" content="Stories, family history, and travel notes from The Royal Egyptian Family.">
-  <title>The Royal Egyptian Family — Stories &amp; Legacy</title>
+  <meta name="description" content="Family stories, heritage, and travel notes from The Royal Egyptian Family.">
+  <title>The Royal Egyptian Family — Family Tree &amp; Journal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Sacramento&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --paper: #f6f0df;
-      --paper-deep: #eee4cc;
-      --ink: #3b1b0c;
-      --muted: #766653;
-      --gold: #b88942;
-      --gold-light: #d3b16d;
-      --line: rgba(137, 100, 46, .23);
-      --white: #fffdf7;
-      --serif: 'Playfair Display', Georgia, serif;
-      --sans: 'DM Sans', Arial, sans-serif;
-      --script: 'Sacramento', cursive;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); }
-    a { color: inherit; text-decoration: none; }
-    button { font: inherit; }
-    .topline { height: 5px; background: linear-gradient(90deg, #6b3514, #d6b66e, #8e5925); }
-    .site-header { position: relative; z-index: 4; background: rgba(246,240,223,.94); border-bottom: 1px solid var(--line); }
-    .nav-wrap { max-width: 1240px; min-height: 82px; margin: auto; padding: 0 34px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
-    .brand { display: flex; align-items: center; gap: 12px; font-family: var(--serif); font-size: 17px; font-weight: 700; line-height: 1.05; letter-spacing: -.3px; }
-    .brand-mark { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--gold); border-radius: 50%; color: var(--gold); font-size: 20px; }
-    .brand small { display: block; margin-top: 5px; color: var(--muted); font: 9px var(--sans); letter-spacing: 2.2px; text-transform: uppercase; }
-    .nav-links { display: flex; align-items: center; gap: 34px; color: #59412c; font-size: 12px; font-weight: 600; letter-spacing: 1.15px; text-transform: uppercase; }
-    .nav-links a { transition: color .2s; }
-    .nav-links a:hover, .nav-links a:focus-visible { color: var(--gold); }
-    .nav-cta { padding: 12px 18px; border: 1px solid var(--gold); border-radius: 2px; color: var(--ink); }
-    .menu-toggle { display: none; border: 0; background: none; color: var(--ink); font-size: 24px; cursor: pointer; }
-    .hero { position: relative; min-height: 650px; overflow: hidden; display: grid; align-items: center; border-bottom: 1px solid var(--line); background: radial-gradient(ellipse at 50% 45%, rgba(255,253,246,.95) 0%, rgba(246,240,223,.9) 54%, rgba(233,219,190,.7) 100%); }
-    .hero:before { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .18; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E"); }
-    .hero-inner { position: relative; z-index: 1; width: min(1240px, 100%); margin: auto; padding: 76px 34px 68px; display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: 50px; }
-    .eyebrow { display: flex; align-items: center; gap: 12px; color: #92703b; font-size: 10px; font-weight: 700; letter-spacing: 2.6px; text-transform: uppercase; }
-    .eyebrow:before { content: ''; width: 34px; height: 1px; background: var(--gold); }
-    h1 { margin: 25px 0 0; font: 600 clamp(54px, 7vw, 92px)/.95 var(--serif); letter-spacing: -4px; }
-    h1 span { display: block; margin: -4px 0 0 -3px; color: #6b310f; font: 400 clamp(58px, 8vw, 100px)/.94 var(--script); letter-spacing: 0; }
-    .hero-copy { max-width: 470px; margin: 25px 0 0; color: #6b5b47; font-size: 15px; line-height: 1.85; }
-    .hero-actions { display: flex; align-items: center; gap: 25px; margin-top: 31px; }
-    .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 12px; padding: 0 21px; border: 1px solid var(--ink); background: var(--ink); color: #fff9eb; font-size: 11px; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase; transition: .2s; }
-    .button:hover { background: #663316; border-color: #663316; transform: translateY(-2px); }
-    .text-link { font-size: 12px; font-weight: 700; letter-spacing: .5px; }
-    .text-link span { margin-left: 8px; color: var(--gold); }
-    .hero-art { position: relative; min-height: 435px; display: grid; place-items: center; }
-    .sun-disc { position: absolute; width: min(410px, 85%); aspect-ratio: 1; border-radius: 50%; background: linear-gradient(145deg, #e6c982, #ba8740 72%, #92622e); opacity: .7; box-shadow: 0 30px 60px rgba(104,63,22,.15); }
-    .sun-disc:after { content: ''; position: absolute; inset: 14px; border: 1px solid rgba(255,247,218,.7); border-radius: inherit; }
-    .pyramid { position: absolute; z-index: 1; bottom: 45px; width: 94%; height: 270px; clip-path: polygon(50% 0, 100% 100%, 0 100%); background: linear-gradient(105deg, #8a5425 0 48%, #c28d3e 48% 51%, #e0bd72 51%); filter: drop-shadow(0 14px 12px rgba(54,27,8,.2)); }
-    .pyramid:after { content: ''; position: absolute; inset: 45% 0 0; opacity: .24; background: repeating-linear-gradient(0deg, transparent 0 22px, #603516 23px 25px), repeating-linear-gradient(90deg, transparent 0 65px, #603516 66px 68px); }
-    .hero-label { position: absolute; z-index: 2; right: 2%; bottom: 4px; padding: 13px 17px; background: var(--white); box-shadow: 0 10px 24px rgba(64,39,14,.12); font-family: var(--serif); font-size: 13px; }
-    .hero-label small { display: block; margin-top: 4px; color: var(--muted); font: 9px var(--sans); letter-spacing: 1.4px; text-transform: uppercase; }
-    .cameo { position: absolute; z-index: 2; width: 102px; height: 142px; padding: 7px; border: 3px double #a87936; border-radius: 50%; background: linear-gradient(145deg, #f8e6b5, #9b622a); box-shadow: 0 8px 20px rgba(51,26,10,.21); }
-    .cameo:before { content: ''; display: block; width: 100%; height: 100%; border: 1px solid rgba(255,245,209,.8); border-radius: 50%; background: radial-gradient(ellipse at 52% 32%, #edc783 0 13%, transparent 14%), radial-gradient(ellipse at 50% 63%, #5b2c14 0 28%, transparent 29%), linear-gradient(160deg, #c89748, #472210); }
-    .cameo.c1 { top: 0; left: 10%; transform: rotate(-8deg); }
-    .cameo.c2 { top: 23px; right: 5%; transform: rotate(9deg); }
-    .cameo.c3 { bottom: 63px; left: 3%; transform: rotate(8deg) scale(.8); }
-    .cameo.c4 { bottom: 42px; right: 8%; transform: rotate(-7deg) scale(.78); }
-    .hero-seal { position: absolute; z-index: 3; left: 50%; top: 49%; transform: translate(-50%,-50%); width: 90px; height: 90px; display: grid; place-items: center; border: 1px solid #f4dfaa; border-radius: 50%; background: rgba(71,35,13,.86); color: #f4dfaa; font: 32px var(--serif); }
-    .section { max-width: 1240px; margin: auto; padding: 94px 34px; }
-    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 34px; }
-    .section-heading h2 { margin: 12px 0 0; font: 600 clamp(32px, 4vw, 48px)/1.1 var(--serif); letter-spacing: -1px; }
-    .section-heading p { max-width: 380px; margin: 0 0 3px; color: var(--muted); font-size: 13px; line-height: 1.7; }
-    .stories { display: grid; grid-template-columns: 1.22fr .78fr .78fr; gap: 20px; }
-    .story-card { overflow: hidden; border: 1px solid var(--line); background: var(--white); transition: transform .25s, box-shadow .25s; }
-    .story-card:hover { transform: translateY(-5px); box-shadow: 0 18px 34px rgba(55,34,13,.1); }
-    .story-image { position: relative; min-height: 208px; overflow: hidden; display: grid; place-items: center; background: linear-gradient(145deg, #d8b66b, #b27b38); }
-    .story-card.featured .story-image { min-height: 278px; }
-    .story-image svg { width: 100%; height: 100%; position: absolute; inset: 0; }
-    .story-image .image-caption { position: absolute; z-index: 1; left: 18px; bottom: 16px; padding: 8px 10px; background: rgba(255,252,242,.9); color: var(--ink); font-size: 9px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; }
-    .story-body { padding: 22px 22px 24px; }
-    .meta { color: #987542; font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
-    .story-body h3 { margin: 11px 0 10px; font: 600 22px/1.2 var(--serif); }
-    .featured .story-body h3 { font-size: 27px; }
-    .story-body p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
-    .story-more { display: inline-block; margin-top: 19px; font-size: 10px; font-weight: 700; letter-spacing: 1.1px; text-transform: uppercase; }
-    .story-more span { color: var(--gold); margin-left: 7px; }
-    .family-band { position: relative; overflow: hidden; background: #3f210f; color: #fff8e9; }
-    .family-band:before { content: '𓂀'; position: absolute; right: -24px; top: -170px; color: rgba(222,185,111,.08); font-size: 530px; }
-    .family-inner { position: relative; z-index: 1; max-width: 1240px; margin: auto; padding: 80px 34px; display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 70px; }
-    .family-inner h2 { margin: 15px 0; font: 600 clamp(34px,4vw,50px)/1.08 var(--serif); }
-    .family-inner p { max-width: 425px; color: #d1c0a3; font-size: 13px; line-height: 1.85; }
-    .family-inner .button { margin-top: 15px; border-color: #d2ae6c; background: transparent; }
-    .family-inner .button:hover { background: #d2ae6c; color: var(--ink); }
-    .tree { min-height: 300px; position: relative; display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: 1fr 1fr; align-items: center; justify-items: center; gap: 27px 10px; }
-    .tree:before, .tree:after { content: ''; position: absolute; z-index: 0; background: #c49a54; opacity: .8; }
-    .tree:before { top: 26%; left: 12%; right: 12%; height: 1px; }
-    .tree:after { top: 26%; bottom: 24%; left: 50%; width: 1px; }
-    .tree-person { position: relative; z-index: 1; width: 89px; text-align: center; }
-    .tree-portrait { width: 77px; height: 95px; margin: auto; padding: 5px; border: 2px solid #c9a15f; border-radius: 50%; background: #75502b; box-shadow: 0 0 0 4px #3f210f; }
-    .tree-portrait:after { content: ''; display: block; width: 100%; height: 100%; border-radius: 50%; background: radial-gradient(ellipse at 50% 33%, #e6c18a 0 15%, transparent 16%), radial-gradient(ellipse at 50% 63%, #8f5930 0 29%, transparent 30%), linear-gradient(145deg, #cc9d52, #38200f); }
-    .tree-person span { display: block; margin-top: 8px; color: #e8d9bc; font-size: 9px; letter-spacing: .5px; }
-    .tree-person:nth-child(1) { grid-column: 2; }
-    .tree-person:nth-child(2) { grid-column: 3; }
-    .tree-person:nth-child(3) { grid-column: 1; }
-    .tree-person:nth-child(4) { grid-column: 2; }
-    .tree-person:nth-child(5) { grid-column: 3; }
-    .tree-person:nth-child(6) { grid-column: 4; }
-    .tree-person:nth-child(1), .tree-person:nth-child(2) { grid-row: 1; }
-    .tree-person:nth-child(n+3) { grid-row: 2; }
-    .newsletter { max-width: 1240px; margin: auto; padding: 88px 34px; text-align: center; }
-    .newsletter h2 { margin: 13px 0; font: 600 clamp(32px,4vw,45px)/1.1 var(--serif); }
-    .newsletter p { max-width: 480px; margin: 0 auto 25px; color: var(--muted); font-size: 13px; line-height: 1.7; }
-    .signup { max-width: 460px; margin: auto; display: flex; border-bottom: 1px solid #9a7946; }
-    .signup input { flex: 1; min-width: 0; padding: 14px 5px; border: 0; outline: 0; background: transparent; color: var(--ink); font: 13px var(--sans); }
-    .signup input:focus { box-shadow: 0 2px 0 var(--gold); }
-    .signup button { padding: 0 5px 0 15px; border: 0; background: transparent; color: var(--ink); cursor: pointer; font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; }
-    .signup button span { margin-left: 9px; color: var(--gold); font-size: 15px; }
-    #form-message { min-height: 20px; margin-top: 12px; color: #765523; font-size: 12px; }
-    footer { border-top: 1px solid var(--line); }
-    .footer-inner { max-width: 1240px; min-height: 90px; margin: auto; padding: 20px 34px; display: flex; align-items: center; justify-content: space-between; gap: 20px; color: var(--muted); font-size: 10px; }
-    .footer-inner strong { color: var(--ink); font-family: var(--serif); font-size: 14px; }
-    .footer-links { display: flex; gap: 19px; text-transform: uppercase; letter-spacing: 1px; }
-    @media (max-width: 850px) {
-      .nav-wrap { min-height: 72px; }
-      .menu-toggle { display: block; }
-      .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; padding: 22px 34px 28px; background: var(--paper); border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; gap: 21px; }
-      .nav-links.open { display: flex; }
-      .hero-inner { grid-template-columns: 1fr; gap: 20px; padding-top: 65px; }
-      .hero-art { min-height: 370px; }
-      .stories { grid-template-columns: 1fr 1fr; }
-      .story-card.featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; }
-      .story-card.featured .story-image { min-height: 100%; }
-      .family-inner { grid-template-columns: 1fr; gap: 40px; }
-    }
-    @media (max-width: 560px) {
-      .nav-wrap { padding: 0 20px; }
-      .hero-inner, .section, .family-inner, .newsletter { padding-left: 20px; padding-right: 20px; }
-      .hero { min-height: 0; }
-      .hero-inner { padding-top: 54px; }
-      h1 { font-size: 60px; letter-spacing: -2.7px; }
-      h1 span { font-size: 68px; }
-      .hero-copy { font-size: 14px; }
-      .hero-art { min-height: 310px; }
-      .sun-disc { width: 280px; }
-      .pyramid { height: 210px; bottom: 35px; }
-      .cameo { width: 74px; height: 105px; }
-      .cameo.c1 { left: 4%; }
-      .cameo.c2 { right: 1%; }
-      .cameo.c3 { left: 0; bottom: 45px; }
-      .cameo.c4 { right: 1%; bottom: 34px; }
-      .hero-seal { width: 68px; height: 68px; font-size: 25px; }
-      .section { padding-top: 68px; padding-bottom: 68px; }
-      .section-heading { align-items: flex-start; flex-direction: column; gap: 13px; }
-      .stories { grid-template-columns: 1fr; }
-      .story-card.featured { display: block; grid-column: auto; }
-      .story-card.featured .story-image { min-height: 220px; }
-      .tree { gap: 24px 0; transform: scale(.92); transform-origin: center; margin: -10px -15px; }
-      .tree-person { width: 72px; }
-      .tree-portrait { width: 65px; height: 82px; }
-      .footer-inner { align-items: flex-start; flex-direction: column; padding: 23px 20px; }
-    }
-    @media (prefers-reduced-motion: reduce) { *, *:before, *:after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+    :root{--paper:#f6f0df;--ink:#3b1b0c;--muted:#766653;--gold:#b88942;--line:#c9a15f;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif;--script:'Sacramento',cursive}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:var(--sans)}a{color:inherit;text-decoration:none}.topline{height:5px;background:linear-gradient(90deg,#6b3514,#d6b66e,#8e5925)}
+    header{background:#f6f0dff2;border-bottom:1px solid #89642e3b}.nav{max-width:1180px;min-height:76px;margin:auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between}.brand{font:700 16px/1.1 var(--serif)}.brand small{display:block;margin-top:5px;color:var(--muted);font:9px var(--sans);letter-spacing:2px;text-transform:uppercase}.links{display:flex;gap:30px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase}.links a:hover{color:var(--gold)}
+    .intro{padding:53px 20px 34px;text-align:center}.eyebrow{color:#92703b;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase}.intro h1{margin:8px 0 0;font:600 clamp(40px,7vw,72px)/1 var(--serif);letter-spacing:-2px}.intro h1 span{display:block;color:#6b310f;font:clamp(48px,8vw,82px)/.95 var(--script);letter-spacing:0}.intro p{max-width:610px;margin:17px auto 0;color:var(--muted);font-size:14px;line-height:1.75}
+    .tree-section{max-width:1320px;margin:0 auto;padding:10px 24px 62px}.tree-card{position:relative;overflow:hidden;padding:32px 28px 30px;border:1px solid #c9a15f;background:linear-gradient(135deg,#fffdf7dd,#eee4ccaa);box-shadow:0 15px 40px #50301712}.tree-card:before{content:'𓂀';position:absolute;right:2%;top:-120px;color:#b889420d;font-size:350px}.tree-title{position:relative;z-index:1;margin:0 0 28px;text-align:center;font:600 25px var(--serif)}
+    .family-tree{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,minmax(110px,1fr));grid-template-rows:auto 68px auto 70px auto;align-items:center;justify-items:center;max-width:1000px;margin:auto}.person{position:relative;z-index:2;width:130px;text-align:center}.portrait{width:96px;height:120px;margin:auto;padding:6px;border:3px double #a87936;border-radius:50%;background:linear-gradient(145deg,#f8e6b5,#9b622a);box-shadow:0 4px 12px #3b1b0c30}.portrait:after{content:'';display:block;width:100%;height:100%;border:1px solid #fff3d4;border-radius:50%;background:radial-gradient(ellipse at 50% 32%,#edc783 0 14%,transparent 15%),radial-gradient(ellipse at 50% 68%,#5b2c14 0 30%,transparent 31%),linear-gradient(145deg,#c89748,#472210)}.name{margin-top:9px;font:600 13px var(--serif)}.role{margin-top:4px;color:var(--muted);font-size:9px;letter-spacing:1px;text-transform:uppercase}
+    .generation-one{grid-row:1}.generation-one.one{grid-column:1}.generation-one.two{grid-column:2}.generation-one.three{grid-column:3}.generation-one.four{grid-column:4}
+    .connector{position:relative;align-self:stretch;width:100%;grid-row:2}.connector.left{grid-column:1/3}.connector.right{grid-column:3/5}.connector:before{content:'';position:absolute;top:0;left:50%;height:100%;border-left:2px solid var(--line)}.connector:after{content:'';position:absolute;top:0;left:25%;right:25%;border-top:2px solid var(--line)}.connector .arrow{position:absolute;bottom:-1px;left:50%;width:9px;height:9px;border-right:2px solid var(--line);border-bottom:2px solid var(--line);transform:translateX(-50%) rotate(45deg)}
+    .generation-two{grid-row:3}.generation-two.a{grid-column:1}.generation-two.b{grid-column:2}.generation-two.c{grid-column:3}.generation-two.d{grid-column:4}
+    .union{grid-row:4;grid-column:2/4;position:relative;width:100%;height:100%}.union:before{content:'';position:absolute;top:0;left:25%;right:25%;border-top:2px solid var(--line)}.union:after{content:'';position:absolute;left:50%;top:0;height:100%;border-left:2px solid var(--line)}.union .down{position:absolute;left:50%;bottom:4px;width:9px;height:9px;border-right:2px solid var(--line);border-bottom:2px solid var(--line);transform:translateX(-50%) rotate(45deg)}
+    .generation-three{grid-row:5}.generation-three.a{grid-column:2}.generation-three.b{grid-column:3}.tree-note{margin:23px 0 0;text-align:center;color:#8a7559;font-size:11px}
+    .journal{padding:58px 24px 78px;background:#fffdf766;border-top:1px solid #89642e2c}.journal-inner{max-width:1100px;margin:auto}.journal h2{margin:10px 0 28px;text-align:center;font:600 38px var(--serif)}.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.post{padding:24px;border:1px solid #89642e30;background:#fffdf7}.post .tag{color:#987542;font-size:9px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase}.post h3{margin:12px 0 9px;font:600 21px/1.25 var(--serif)}.post p{margin:0;color:var(--muted);font-size:12px;line-height:1.75}footer{padding:23px;text-align:center;border-top:1px solid #89642e30;color:var(--muted);font-size:11px}
+    @media(max-width:700px){.nav{padding:0 18px}.links{gap:14px;font-size:9px}.intro{padding-top:40px}.tree-section{padding:8px 12px 42px}.tree-card{padding:25px 8px}.tree-title{font-size:21px}.family-tree{grid-template-columns:repeat(4,minmax(68px,1fr));grid-template-rows:auto 54px auto 55px auto}.person{width:75px}.portrait{width:64px;height:82px;padding:4px}.name{font-size:10px}.role{font-size:7px;letter-spacing:.5px}.posts{grid-template-columns:1fr}.journal{padding:45px 18px}.journal h2{font-size:32px}}
+    @media(max-width:390px){.family-tree{grid-template-columns:repeat(4,minmax(58px,1fr))}.person{width:64px}.portrait{width:56px;height:72px}.name{font-size:9px}.tree-card{padding-left:4px;padding-right:4px}}
   </style>
 </head>
 <body>
   <div class="topline"></div>
-  <header class="site-header">
-    <div class="nav-wrap">
-      <a class="brand" href="#home" aria-label="The Royal Egyptian Family home"><span class="brand-mark">𓂀</span><span>THE ROYAL<br>EGYPTIAN FAMILY<small>Stories &amp; legacy</small></span></a>
-      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#stories">The Journal</a><a href="#family">Our Family</a><a href="#about">Our Story</a><a class="nav-cta" href="#newsletter">Stay in touch</a>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-inner">
-        <div>
-          <div class="eyebrow">A modern family, an ancient home</div>
-          <h1>The Royal<span>Egyptian Family</span></h1>
-          <p class="hero-copy">A little window into our world — the people we love, the places that move us, and the traditions that keep our story alive.</p>
-          <div class="hero-actions"><a class="button" href="#stories">Read our journal <span>↗</span></a><a class="text-link" href="#family">Meet the family <span>→</span></a></div>
-        </div>
-        <div class="hero-art" aria-label="Illustration of the Egyptian desert and family portraits">
-          <div class="sun-disc"></div><div class="pyramid"></div>
-          <div class="cameo c1"></div><div class="cameo c2"></div><div class="cameo c3"></div><div class="cameo c4"></div>
-          <div class="hero-seal">𓂀</div>
-          <div class="hero-label">Rooted in Egypt<small>Made of many stories</small></div>
-        </div>
+  <header><nav class="nav" aria-label="Main navigation"><a class="brand" href="#home">THE ROYAL EGYPTIAN FAMILY<small>Stories &amp; legacy</small></a><div class="links"><a href="#family">Family tree</a><a href="#journal">Journal</a><a href="#about">Our story</a></div></nav></header>
+  <main id="home">
+    <section class="intro" id="family"><div class="eyebrow">A modern family, an ancient home</div><h1>The Royal<span>Egyptian Family</span></h1><p>Meet the people behind our stories. Follow the family connections from the elders, to their children, and the next generation.</p></section>
+    <section class="tree-section" aria-labelledby="tree-heading"><div class="tree-card"><h2 class="tree-title" id="tree-heading">Our Family Tree</h2>
+      <div class="family-tree" role="img" aria-label="Family tree: four elders at the top; their children in the middle; and two younger family members in the next generation">
+        <div class="person generation-one one"><div class="portrait"></div><div class="name">Elder 1</div><div class="role">Grandparent</div></div>
+        <div class="person generation-one two"><div class="portrait"></div><div class="name">Elder 2</div><div class="role">Grandparent</div></div>
+        <div class="person generation-one three"><div class="portrait"></div><div class="name">Elder 3</div><div class="role">Grandparent</div></div>
+        <div class="person generation-one four"><div class="portrait"></div><div class="name">Elder 4</div><div class="role">Grandparent</div></div>
+        <div class="connector left" aria-hidden="true"><i class="arrow"></i></div><div class="connector right" aria-hidden="true"><i class="arrow"></i></div>
+        <div class="person generation-two a"><div class="portrait"></div><div class="name">Family member 1</div><div class="role">Their child</div></div>
+        <div class="person generation-two b"><div class="portrait"></div><div class="name">Family member 2</div><div class="role">Their child</div></div>
+        <div class="person generation-two c"><div class="portrait"></div><div class="name">Family member 3</div><div class="role">Their child</div></div>
+        <div class="person generation-two d"><div class="portrait"></div><div class="name">Family member 4</div><div class="role">Their child</div></div>
+        <div class="union" aria-hidden="true"><i class="down"></i></div>
+        <div class="person generation-three a"><div class="portrait"></div><div class="name">Next generation 1</div><div class="role">Grandchild</div></div>
+        <div class="person generation-three b"><div class="portrait"></div><div class="name">Next generation 2</div><div class="role">Grandchild</div></div>
       </div>
-    </section>
-    <section class="section" id="stories">
-      <div class="section-heading">
-        <div><div class="eyebrow">Notes from our family</div><h2>Stories worth keeping</h2></div>
-        <p>Reflections on the moments, memories, and heritage that make a family — written from wherever life takes us.</p>
-      </div>
-      <div class="stories">
-        <article class="story-card featured">
-          <div class="story-image">
-            <svg viewBox="0 0 700 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#e9c977"/><stop offset="1" stop-color="#c77d37"/></linearGradient><linearGradient id="sand" x2="0" y2="1"><stop stop-color="#d9a64e"/><stop offset="1" stop-color="#895027"/></linearGradient></defs><rect width="700" height="400" fill="url(#sky)"/><circle cx="510" cy="92" r="53" fill="#f7e3a8" opacity=".8"/><path d="M0 300 Q160 240 340 297T700 270V400H0Z" fill="#bd8542"/><path d="M0 340 Q200 260 400 330T700 305V400H0Z" fill="url(#sand)"/><path d="M155 320 330 76 510 320Z" fill="#98602e"/><path d="M330 76 510 320H345Z" fill="#d5a657"/><path d="M0 356 Q200 330 390 358T700 346" fill="none" stroke="#f0d091" stroke-width="3" opacity=".7"/></svg>
-            <span class="image-caption">From the beginning</span>
-          </div>
-          <div class="story-body"><div class="meta">Family journal · 6 min read</div><h3>Where our story begins: a love letter to Egypt</h3><p>Some places stay with you long after you leave. For us, Egypt is more than home — it is the first chapter in every story we tell.</p><a class="story-more" href="#about">Read the story <span>↗</span></a></div>
-        </article>
-        <article class="story-card">
-          <div class="story-image">
-            <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="480" height="300" fill="#d9c18b"/><path d="M0 220Q120 145 240 220T480 200V300H0Z" fill="#9d7442"/><path d="M0 254Q170 200 330 255T480 236V300H0Z" fill="#71502f"/><path d="M160 205V120h160v85M180 120V80h120v40" fill="none" stroke="#f4e3ba" stroke-width="8"/><path d="M202 205v-53h33v53m38 0v-53h25v53" fill="#b88a4e"/><circle cx="90" cy="80" r="30" fill="#f7e4af"/></svg>
-            <span class="image-caption">Little traditions</span>
-          </div>
-          <div class="story-body"><div class="meta">Traditions · 4 min read</div><h3>The rituals that bring us home</h3><p>From familiar recipes to the stories retold around the table, the little things are often the ones that last.</p><a class="story-more" href="#about">Read the story <span>↗</span></a></div>
-        </article>
-        <article class="story-card">
-          <div class="story-image">
-            <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="480" height="300" fill="#b8b68e"/><path d="M0 180 78 100l58 57 74-100 91 104 56-55 123 90v104H0Z" fill="#63705a"/><path d="M0 215q100-50 210 8t270-14v91H0Z" fill="#7c6848"/><path d="M168 300q14-71 50-83 35 12 51 83" fill="#e2bd76"/><circle cx="215" cy="189" r="21" fill="#8d512d"/><path d="M204 190q11-24 23 0" fill="none" stroke="#4b2a1c" stroke-width="5"/><path d="M245 243q27-29 60 0" fill="none" stroke="#e9d39f" stroke-width="6"/></svg>
-            <span class="image-caption">On the road</span>
-          </div>
-          <div class="story-body"><div class="meta">Travel notes · 5 min read</div><h3>A slower kind of adventure</h3><p>Our favorite journeys aren't measured in miles. They're measured in the conversations we bring back.</p><a class="story-more" href="#about">Read the story <span>↗</span></a></div>
-        </article>
-      </div>
-    </section>
-    <section class="family-band" id="family">
-      <div class="family-inner">
-        <div><div class="eyebrow">The people behind the stories</div><h2>Every family has a story. This is ours.</h2><p>Across generations, our family is connected by shared memories, big-hearted traditions, and a deep love for the place we call home. Get to know the faces and stories that make us who we are.</p><a class="button" href="#about">Discover our family <span>↗</span></a></div>
-        <div class="tree" aria-label="A small family tree illustration">
-          <div class="tree-person"><div class="tree-portrait"></div><span>Our elders</span></div><div class="tree-person"><div class="tree-portrait"></div><span>Our roots</span></div>
-          <div class="tree-person"><div class="tree-portrait"></div><span>Our family</span></div><div class="tree-person"><div class="tree-portrait"></div><span>Our stories</span></div><div class="tree-person"><div class="tree-portrait"></div><span>Our next chapter</span></div><div class="tree-person"><div class="tree-portrait"></div><span>Always growing</span></div>
-        </div>
-      </div>
-    </section>
-    <section class="newsletter" id="newsletter">
-      <div class="eyebrow" style="justify-content:center">A note from us to you</div><h2>Stay a little closer</h2><p>New stories, family moments, and notes from Egypt — delivered occasionally, always with love.</p>
-      <form class="signup" id="signup-form"><label for="email" class="visually-hidden" style="position:absolute;clip:rect(0,0,0,0)">Your email address</label><input id="email" type="email" placeholder="Your email address" required><button type="submit">Join our list <span>→</span></button></form><div id="form-message" role="status" aria-live="polite"></div>
-    </section>
+      <p class="tree-note">Names and portraits are placeholders — replace them with your family’s details.</p>
+    </div></section>
+    <section class="journal" id="journal"><div class="journal-inner"><div class="eyebrow" style="text-align:center">Notes from our family</div><h2>Stories worth keeping</h2><div class="posts"><article class="post"><div class="tag">Family journal · 6 min read</div><h3>Where our story begins: a love letter to Egypt</h3><p>Some places stay with you long after you leave. For us, Egypt is more than home — it is the first chapter in every story we tell.</p></article><article class="post"><div class="tag">Traditions · 4 min read</div><h3>The rituals that bring us home</h3><p>From familiar recipes to the stories retold around the table, the little things are often the ones that last.</p></article><article class="post"><div class="tag">Travel notes · 5 min read</div><h3>A slower kind of adventure</h3><p>Our favorite journeys aren't measured in miles. They're measured in the conversations we bring back.</p></article></div></div></section>
   </main>
-  <footer id="about"><div class="footer-inner"><strong>The Royal Egyptian Family</strong><span>Rooted in Egypt. Connected everywhere.</span><div class="footer-links"><a href="#stories">Journal</a><a href="#family">Family</a><a href="#home">Back to top ↑</a></div></div></footer>
-  <script>
-    const menuButton = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav-links');
-    menuButton.addEventListener('click', () => {
-      const isOpen = nav.classList.toggle('open');
-      menuButton.setAttribute('aria-expanded', String(isOpen));
-      menuButton.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
-      menuButton.textContent = isOpen ? '×' : '☰';
-    });
-    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.setAttribute('aria-label', 'Open navigation');
-      menuButton.textContent = '☰';
-    }));
-    document.querySelector('#signup-form').addEventListener('submit', event => {
-      event.preventDefault();
-      document.querySelector('#form-message').textContent = 'Thank you for joining us — our next note will be on its way soon.';
-      event.currentTarget.reset();
-    });
-  </script>
+  <footer id="about">The Royal Egyptian Family · Rooted in Egypt. Connected everywhere.</footer>
 </body>
 </html>
