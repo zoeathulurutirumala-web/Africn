@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f0df">
+  <meta name="description" content="Meet the generations of The Royal Egyptian Family in our family tree.">
+  <title>Our Family Tree — The Royal Egyptian Family</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#f6f0df;--ink:#3b1b0c;--muted:#766653;--gold:#b88942;--gold-light:#d3b16d;--line:rgba(137,100,46,.3);--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif;--script:'Sacramento',cursive}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:var(--sans)}a{color:inherit;text-decoration:none}.topline{height:5px;background:linear-gradient(90deg,#6b3514,#d6b66e,#8e5925)}
+    header{background:#f6f0dff2;border-bottom:1px solid var(--line)}.nav{max-width:1180px;min-height:76px;margin:auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font:700 15px var(--serif);letter-spacing:.3px}.brand small{display:block;margin-top:5px;color:var(--muted);font:9px var(--sans);letter-spacing:2px;text-transform:uppercase}.links{display:flex;align-items:center;gap:26px;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}.links a{padding:10px 0}.links a.active{border-bottom:1px solid var(--gold);color:#805523}.links a:hover{color:var(--gold)}
+    .intro{padding:55px 20px 30px;text-align:center}.eyebrow{color:#92703b;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase}.intro h1{margin:13px 0 0;font:600 clamp(38px,6vw,65px)/1 var(--serif);letter-spacing:-1.5px}.intro h1 span{display:block;margin-top:-3px;color:#6b310f;font:clamp(50px,7vw,78px)/1 var(--script)}.intro p{max-width:590px;margin:17px auto 0;color:var(--muted);font-size:13px;line-height:1.8}
+    .tree-section{max-width:1300px;margin:0 auto;padding:10px 24px 62px}.tree-card{position:relative;overflow:hidden;padding:32px 28px 27px;border:1px solid #c9a15f;background:linear-gradient(135deg,#fffdf6e8,#efe4cae8);box-shadow:0 14px 38px #61431b12}.tree-card:before{content:'𓂀';position:absolute;top:-135px;right:-40px;color:#b889420a;font-size:400px}.tree-title{position:relative;margin:0 0 32px;text-align:center;font:600 27px var(--serif)}.tree-title:after{content:'';display:block;width:45px;height:1px;margin:14px auto 0;background:var(--gold)}
+    .family-tree{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,minmax(110px,1fr));grid-template-rows:auto 68px auto 70px auto;align-items:center;justify-items:center;max-width:1050px;margin:auto}.person{position:relative;z-index:2;width:140px;text-align:center}.portrait{position:relative;width:98px;height:126px;margin:0 auto 10px;padding:7px;border:3px double #a87936;border-radius:50%;background:linear-gradient(145deg,#f8e6b5,#9b622a);box-shadow:0 5px 13px #39210f26}.portrait:before{content:'';display:block;width:100%;height:100%;border:1px solid #fff1c8b3;border-radius:50%;background:radial-gradient(ellipse at 50% 34%,#eac88d 0 15%,transparent 16%),radial-gradient(ellipse at 50% 66%,#70401f 0 30%,transparent 31%),linear-gradient(155deg,#d9a955,#542c13)}.name{font:600 13px var(--serif)}.role{margin-top:4px;color:#8b765c;font-size:9px;letter-spacing:1px;text-transform:uppercase}.generation-one{grid-row:1}.generation-one.one{grid-column:1}.generation-one.two{grid-column:2}.generation-one.three{grid-column:3}.generation-one.four{grid-column:4}.connector{position:relative;align-self:stretch;width:100%;grid-row:2}.connector.left{grid-column:1/3}.connector.right{grid-column:3/5}.connector:before{content:'';position:absolute;top:0;left:25%;right:25%;height:33px;border-top:2px solid var(--gold-light);border-left:2px solid var(--gold-light);border-right:2px solid var(--gold-light);border-radius:8px 8px 0 0}.connector:after{content:'';position:absolute;top:32px;left:50%;height:33px;border-left:2px solid var(--gold-light)}.arrow{position:absolute;z-index:1;left:calc(50% - 5px);bottom:0;width:8px;height:8px;border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(45deg)}.generation-two{grid-row:3}.generation-two.a{grid-column:1}.generation-two.b{grid-column:2}.generation-two.c{grid-column:3}.generation-two.d{grid-column:4}.union{grid-row:4;grid-column:2/4;position:relative;width:100%;height:100%}.union:before{content:'';position:absolute;top:0;left:25%;right:25%;border-top:2px solid var(--gold-light)}.union:after{content:'';position:absolute;top:0;left:50%;height:48px;border-left:2px solid var(--gold-light)}.down{position:absolute;z-index:1;top:43px;left:calc(50% - 5px);width:8px;height:8px;border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(45deg)}.generation-three{grid-row:5}.generation-three.a{grid-column:2}.generation-three.b{grid-column:3}.tree-note{position:relative;margin:25px 0 0;text-align:center;color:#8a7559;font-size:11px}
+    .footer{padding:23px 24px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:10px;letter-spacing:.4px}.footer strong{color:var(--ink);font-family:var(--serif)}
+    @media(max-width:700px){.nav{padding:0 18px}.links{gap:15px;font-size:9px}.intro{padding-top:40px}.tree-section{padding:8px 12px 42px}.tree-card{padding:25px 8px}.tree-title{font-size:23px}.family-tree{grid-template-columns:repeat(4,minmax(72px,1fr));grid-template-rows:auto 48px auto 50px auto}.person{width:80px}.portrait{width:68px;height:88px;padding:5px;margin-bottom:7px}.name{font-size:10px}.role{font-size:8px}.connector:before{height:22px}.connector:after{top:21px;height:24px}.union:after{height:31px}.down{top:27px}.tree-note{font-size:10px}}
+    @media(max-width:390px){.family-tree{grid-template-columns:repeat(4,minmax(58px,1fr))}.person{width:64px}.portrait{width:56px;height:72px}.name{font-size:9px}.tree-card{padding-left:4px;padding-right:4px}.links{gap:11px;font-size:8px}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html">THE ROYAL EGYPTIAN FAMILY<small>Stories &amp; legacy</small></a><div class="links"><a class="active" href="family-tree.html" aria-current="page">Family Tree</a><a href="index.html#journal">Journal</a><a href="index.html#about">Our Story</a></div></nav></header>
+  <main>
+    <section class="intro"><div class="eyebrow">A modern family, an ancient home</div><h1>Our Family<span>Tree</span></h1><p>Every branch holds a story. Meet the generations, connections, and shared roots that make our family what it is.</p></section>
+    <section class="tree-section" aria-labelledby="tree-heading"><div class="tree-card"><h2 class="tree-title" id="tree-heading">The generations before us — and those still to come</h2>
+      <div class="family-tree" role="img" aria-label="Family tree: four grandparents at the top, four family members in the middle, and two grandchildren in the next generation">
+        <div class="person generation-one one"><div class="portrait"></div><div class="name">Elder 1</div><div class="role">Grandparent</div></div>
+        <div class="person generation-one two"><div class="portrait"></div><div class="name">Elder 2</div><div class="role">Grandparent</div></div>
+        <div class="person generation-one three"><div class="portrait"></div><div class="name">Elder 3</div><div class="role">Grandparent</div></div>
+        <div class="person generation-one four"><div class="portrait"></div><div class="name">Elder 4</div><div class="role">Grandparent</div></div>
+        <div class="connector left" aria-hidden="true"><i class="arrow"></i></div><div class="connector right" aria-hidden="true"><i class="arrow"></i></div>
+        <div class="person generation-two a"><div class="portrait"></div><div class="name">Family member 1</div><div class="role">Their child</div></div>
+        <div class="person generation-two b"><div class="portrait"></div><div class="name">Family member 2</div><div class="role">Their child</div></div>
+        <div class="person generation-two c"><div class="portrait"></div><div class="name">Family member 3</div><div class="role">Their child</div></div>
+        <div class="person generation-two d"><div class="portrait"></div><div class="name">Family member 4</div><div class="role">Their child</div></div>
+        <div class="union" aria-hidden="true"><i class="down"></i></div>
+        <div class="person generation-three a"><div class="portrait"></div><div class="name">Next generation 1</div><div class="role">Grandchild</div></div>
+        <div class="person generation-three b"><div class="portrait"></div><div class="name">Next generation 2</div><div class="role">Grandchild</div></div>
+      </div>
+      <p class="tree-note">Names and portraits are placeholders — replace them with your family’s details.</p>
+    </div></section>
+  </main>
+  <footer class="footer"><strong>The Royal Egyptian Family</strong> · Rooted in Egypt. Connected everywhere.</footer>
+</body>
+</html>
